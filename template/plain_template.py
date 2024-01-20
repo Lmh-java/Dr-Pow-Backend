@@ -1,4 +1,5 @@
-from typing import List, io
+import io
+from typing import List
 
 from PIL.Image import Image
 from pptx import Presentation
@@ -12,13 +13,20 @@ class PlainTemplate(BaseTemplate):
     def __init__(self):
         self.prs = Presentation()
 
-    def create_pic_slide(self, title: str, content: List[str], pic: Image) -> None:
-        slide_layout = self.prs.slide_layouts[1]  # 1 corresponds to the content slide layout
+    def create_title_slide(self, title: str) -> None:
+        slide_layout = self.prs.slide_layouts[0]  # 0 corresponds to the title slide layout
         slide = self.prs.slides.add_slide(slide_layout)
 
         title_box = slide.shapes.title
-        content_box = slide.placeholders[1]
-        image_box = slide.placeholders[10]
+        title_box.text = title
+
+    def create_pic_slide(self, title: str, content: List[str], pic: Image) -> None:
+        slide_layout = self.prs.slide_layouts[8]  # 1 corresponds to the content slide layout
+        slide = self.prs.slides.add_slide(slide_layout)
+
+        title_box = slide.shapes.title
+        content_box = slide.placeholders[0]
+        image_box = slide.placeholders[1]
 
         title_box.text = title
         for row in content:

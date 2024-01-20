@@ -1,0 +1,29 @@
+{
+  "presentation theme": "Skills and Experience as an Ideal Employee",
+  "presentation slides": [
+    {
+      "title": "Academic Knowledge",
+      "body": [
+        "I have gained professional knowledge in computer science through my courses at UBC.",
+        "I have a strong theoretical understanding of computer science.",
+        "I am well-prepared academically for working in the industry."
+      ]
+    },
+    {
+      "title": "Practical Skills",
+      "body": [
+        "I have practical experience as a freelancer and a back-end developer at a local IT company.",
+        "I have worked with modern software development frameworks like Springboot, PyQt5, and Vue.",
+        "These skills make me an ideal employee for the technology industry."
+      ]
+    },
+    {
+      "title": "Leadership and Innovation",
+      "body": [
+        "I have demonstrated leadership skills as the president of the student union in high school.",
+        "I organized various events and learned effective communication, task completion, and overcoming challenges as a team.",
+        "I am ready to embrace teamwork, challenges, and innovation in the workplace."
+      ]
+    }
+  ]
+}

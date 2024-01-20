@@ -18,7 +18,7 @@ async def test():
 @app.post("/upload")
 async def upload_file(file: UploadFile, prompt: str = '', template: str = '', file_type: str = ''):
     generator = PPTGenerator(file, prompt, template, file_type)
-    await generator.generate()
+    generator.generate()
     return {"filename": file.filename, 'upload_id': uuid1()}
 
 

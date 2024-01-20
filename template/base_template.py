@@ -8,6 +8,10 @@ from pptx import Presentation
 class BaseTemplate(ABC):
 
     @abstractmethod
+    def create_title_slide(self, title: str) -> None:
+        pass
+
+    @abstractmethod
     def create_pic_slide(self, title: str, content: List[str], pic: Image) -> None:
         pass
 
