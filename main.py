@@ -5,7 +5,7 @@ from uuid import uuid1
 import uvicorn
 from fastapi import FastAPI, UploadFile
 from starlette.middleware.cors import CORSMiddleware
-from starlette.responses import FileResponse, StreamingResponse
+from starlette.responses import StreamingResponse
 
 from service.ppt_gen import PPTGenerator
 
