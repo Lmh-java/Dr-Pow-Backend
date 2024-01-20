@@ -4,6 +4,7 @@ from uuid import uuid1
 
 import uvicorn
 from fastapi import FastAPI, UploadFile
+from starlette.middleware.cors import CORSMiddleware
 from starlette.responses import FileResponse, StreamingResponse
 
 from service.ppt_gen import PPTGenerator
@@ -11,6 +12,19 @@ from service.ppt_gen import PPTGenerator
 app = FastAPI()
 # {upload_id: PresentationFile}
 app.cache_storage = dict()
+
+origins = [
+    "http://localhost",
+    "http://localhost:3000",
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 
 @app.get("/test")
