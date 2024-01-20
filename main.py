@@ -1,13 +1,16 @@
 import logging
+from io import BytesIO
 from uuid import uuid1
 
 import uvicorn
 from fastapi import FastAPI, UploadFile
-from starlette.responses import FileResponse
+from starlette.responses import FileResponse, StreamingResponse
 
 from service.ppt_gen import PPTGenerator
 
 app = FastAPI()
+# {upload_id: PresentationFile}
+app.cache_storage = dict()
 
 
 @app.get("/test")
@@ -18,13 +21,20 @@ async def test():
 @app.post("/upload")
 async def upload_file(file: UploadFile, prompt: str = '', template: str = '', file_type: str = ''):
     generator = PPTGenerator(file, prompt, template, file_type)
-    generator.generate()
-    return {"filename": file.filename, 'upload_id': uuid1()}
+    upload_id = str(uuid1())
+    pre_file = generator.generate()
+    app.cache_storage[upload_id] = pre_file
+    return {"filename": file.filename, 'upload_id': upload_id}
 
 
 @app.post("/download")
-async def download_file(upload_id: str) -> FileResponse:
-    return FileResponse('./tests/test_pptx.pptx', media_type='application/octet-stream', filename='test_pptx.pptx')
+async def download_file(upload_id: str) -> StreamingResponse:
+    output = BytesIO()
+    app.cache_storage[upload_id].save(output)
+    output.seek(0)
+
+    # app.cache_storage.pop(upload_id)
+    return StreamingResponse(output, media_type='application/octet-stream')
 
 
 if __name__ == '__main__':

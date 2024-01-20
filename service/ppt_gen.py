@@ -6,6 +6,7 @@ from typing import List
 from PIL import Image
 from docx import Document
 from fastapi import UploadFile
+from pptx import Presentation
 
 from service.doc_parser import extract_doc_content
 from template.plain_template import PlainTemplate
@@ -23,7 +24,7 @@ class PPTGenerator:
         self.template = PlainTemplate()
         self.file_type = file_type
 
-    def generate(self):
+    def generate(self) -> Presentation:
         # convert UploadFile to Document obj
         doc_content = extract_doc_content(self.doc_file)
         logging.debug("received doc content: {}".format(doc_content[:50]))
@@ -39,6 +40,5 @@ class PPTGenerator:
         presentation_slides: List[dict] = json_result['presentation slides']
         for slide in presentation_slides:
             self.template.create_pic_slide(slide['title'], slide['body'], Image.open('tests/test_image.png'))
-        self.template.get_ppt().save("tests/test_outcome.pptx")
         logging.debug("Successfully created pptx")
-
+        return self.template.get_ppt()

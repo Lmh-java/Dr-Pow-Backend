@@ -8,3 +8,4 @@ r = requests.post(url, files={
     "prompt": "test prompt",
     "template": "test template",
     "file_type": "application/vnd.openxmlformats-officedocument"})
+print(r.json())
