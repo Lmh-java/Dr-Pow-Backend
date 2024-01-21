@@ -33,6 +33,7 @@ async def test():
     return {"message": "Congrats, tests passed"}
 
 
+# UploadFile
 @app.post("/upload")
 async def upload_file(file: UploadFile, prompt: str = '', template: str = '', file_type: str = ''):
     content = parse_content(file)

@@ -1,3 +1,5 @@
+import logging
+
 from google.cloud import vision
 
 def detect_text_in_image(path):

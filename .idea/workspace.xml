@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fbebfe2b-22c5-4fc1-8043-4a9cb08e956f" name="Changes" comment="fixed bug">
-      <change beforePath="$PROJECT_DIR$/.idea/Doc2PPTBackEnd.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Doc2PPTBackEnd.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="fbebfe2b-22c5-4fc1-8043-4a9cb08e956f" name="Changes" comment="lskjf kill mee">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/content_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/service/content_parser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/google_cloud_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/google_cloud_api.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,7 +138,7 @@
       <workItem from="1705830853611" duration="1127000" />
       <workItem from="1705833439327" duration="2029000" />
       <workItem from="1705835732604" duration="158000" />
-      <workItem from="1705835894196" duration="209000" />
+      <workItem from="1705835894196" duration="1407000" />
     </task>
     <task id="LOCAL-00001" summary="fixed bug">
       <option name="closed" value="true" />
@@ -149,7 +148,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705831074718</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="lskjf kill mee">
+      <option name="closed" value="true" />
+      <created>1705836124420</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1705836124420</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -169,7 +176,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="fixed bug" />
     <MESSAGE value="Added google_cloud api support to handle images" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added google_cloud api support to handle images" />
+    <MESSAGE value="lskjf kill mee" />
+    <option name="LAST_COMMIT_MESSAGE" value="lskjf kill mee" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Dr_Pow_Backend$main.coverage" NAME="main Coverage Results" MODIFIED="1705818697551" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
