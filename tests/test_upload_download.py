@@ -6,6 +6,16 @@ r = requests.post(url, files={
     "file": ("filename", open('test_doc.docx', "rb"),
              "application/vnd.openxmlformats-officedocument.presentationml.presentation")},
                   params={"prompt": "Use Spanish to return",
-                          "template": "History",
+                          "template": "Minimalistic",
                           "file_type": "application/vnd.openxmlformats-officedocument"})
 print(r.json())
+upload_id = r.json()['upload_id']
+
+url = 'http://localhost:4000/download'
+
+s = requests.Session()
+r = requests.get(url, params={"upload_id": upload_id})
+
+with open('test_outcome.pptx', 'wb+') as ppt:
+    for chunk in r.iter_content():
+        ppt.write(chunk)

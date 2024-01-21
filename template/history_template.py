@@ -12,6 +12,7 @@ class HistoryTemplate(BaseTemplate):
 
     def __init__(self):
         self.prs = Presentation("template/pptx_templates/History.pptx")
+        self.count = 0
 
     def create_title_slide(self, title: str) -> None:
         slide_layout = self.prs.slide_layouts[0]  # 0 corresponds to the title slide layout
@@ -21,7 +22,10 @@ class HistoryTemplate(BaseTemplate):
         title_box.text = title
 
     def create_pic_slide(self, title: str, content: List[str], pic: Image) -> None:
-        slide_layout = self.prs.slide_layouts[1]  # 1 corresponds to the content slide layout
+        self.count += 1
+        slide_layout = self.prs.slide_layouts[self.count]  # 1 corresponds to the content slide layout
+        if self.count + 1 == 4:
+            self.count = 0
         slide = self.prs.slides.add_slide(slide_layout)
 
         title_box = slide.shapes.title
