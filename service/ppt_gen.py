@@ -21,7 +21,7 @@ from api.openai_api import query_chatgpt3_5
 from api.unsplash_api import search_photo, download_photo
 
 # FIXME: If this flag is true, it will save the api call chances.
-DEBUG_FLAG = True
+DEBUG_FLAG = False
 
 
 # Core PPT Generator
@@ -65,7 +65,6 @@ class PPTGenerator:
         presentation_slides: List[dict] = json_result['presentation slides']
         count = 0
         for slide in presentation_slides:
-            # FIXME: For not DDOS the API, we limit the number of API calls.
             count += 1
             if count > 10:
                 break
