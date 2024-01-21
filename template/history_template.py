@@ -23,9 +23,7 @@ class HistoryTemplate(BaseTemplate):
 
     def create_pic_slide(self, title: str, content: List[str], pic: Image) -> None:
         self.count += 1
-        slide_layout = self.prs.slide_layouts[self.count]  # 1 corresponds to the content slide layout
-        if self.count + 1 == 4:
-            self.count = 0
+        slide_layout = self.prs.slide_layouts[self.count % 2 + 1]  # 1 corresponds to the content slide layout
         slide = self.prs.slides.add_slide(slide_layout)
 
         title_box = slide.shapes.title

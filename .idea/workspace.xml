@@ -4,13 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fbebfe2b-22c5-4fc1-8043-4a9cb08e956f" name="Changes" comment="Added support rtf and md">
+    <list default="true" id="fbebfe2b-22c5-4fc1-8043-4a9cb08e956f" name="Changes" comment="Adjusted Templates">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/openai_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/openai_api.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/history_template.py" beforeDir="false" afterPath="$PROJECT_DIR$/template/history_template.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/template/pptx_templates/History.pptx" beforeDir="false" afterPath="$PROJECT_DIR$/template/pptx_templates/History.pptx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/template/pptx_templates/Minimalistic.pptx" beforeDir="false" afterPath="$PROJECT_DIR$/template/pptx_templates/Minimalistic.pptx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/template/pptx_templates/Pastel.pptx" beforeDir="false" afterPath="$PROJECT_DIR$/template/pptx_templates/Pastel.pptx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/template/pptx_templates/Portfolio.pptx" beforeDir="false" afterPath="$PROJECT_DIR$/template/pptx_templates/Portfolio.pptx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/pptx_templates/School.pptx" beforeDir="false" afterPath="$PROJECT_DIR$/template/pptx_templates/School.pptx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/example_json_response.json" beforeDir="false" afterPath="$PROJECT_DIR$/tests/example_json_response.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_outcome.pptx" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_outcome.pptx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_rft.rtf" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_rtf.rtf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_upload_download.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_upload_download.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -180,7 +185,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705840852256</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Adjusted Templates">
+      <option name="closed" value="true" />
+      <created>1705843143246</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1705843143246</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -203,10 +216,11 @@
     <MESSAGE value="lskjf kill mee" />
     <MESSAGE value="Added test image" />
     <MESSAGE value="Added support rtf and md" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added support rtf and md" />
+    <MESSAGE value="Adjusted Templates" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adjusted Templates" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Dr_Pow_Backend$main.coverage" NAME="main Coverage Results" MODIFIED="1705840455489" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Dr_Pow_Backend$test_upload_download.coverage" NAME="test_upload_download Coverage Results" MODIFIED="1705840467625" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/Dr_Pow_Backend$main.coverage" NAME="main Coverage Results" MODIFIED="1705845954789" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Dr_Pow_Backend$test_upload_download.coverage" NAME="test_upload_download Coverage Results" MODIFIED="1705846109128" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
   </component>
 </project>

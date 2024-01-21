@@ -3,10 +3,10 @@ import requests
 url = 'http://localhost:4000/upload'
 
 r = requests.post(url, files={
-    "file": ("test_image.png", open('test_image.png', "rb"),
+    "file": ("test_rtf.rtf", open('test_rtf.rtf', "rb"),
              "application/vnd.openxmlformats-officedocument.presentationml.presentation")},
                   params={"prompt": "",
-                          "template": "Minimalistic",
+                          "template": "Portfolio",
                           "file_type": "application/vnd.openxmlformats-officedocument"})
 print(r.json())
 upload_id = r.json()['upload_id']
