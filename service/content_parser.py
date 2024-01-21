@@ -30,4 +30,4 @@ def parse_content(file: UploadFile) -> str:
         text = rtf_to_text(file.file.read().decode("utf-8"))
         return text
     else:
-        raise ValueError("Unsupported file")
+        return file.file.read().decode("utf-8")
