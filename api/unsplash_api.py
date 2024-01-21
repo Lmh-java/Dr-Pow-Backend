@@ -39,7 +39,7 @@ def download_photo(photo_id) -> PIL.Image:
     if response.status_code == 200:
         res_data = response.json()
         # read the image using PIL
-        return PIL.Image.open(requests.get(res_data['links']['download'], stream=True).raw)
+        return PIL.Image.open(requests.get(res_data['urls']['regular'], stream=True).raw)
     else:
         print(f"Error: {response.status_code}")
         return None
