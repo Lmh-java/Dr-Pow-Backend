@@ -18,8 +18,10 @@ def query_chatgpt3_5(content: str, additional_prompt: str) -> ChatCompletionMess
              "content": "You are a helpful assistant. You expertise in summarizing texts and parse information into json"},
             {"role": "user", "content":
                 """
-                Summarize using 3-5 keywords each and convert the content to the following format
-                (You should use the language according to the text provided):
+                Summarize using 3-5 keywords each and convert the content to the following format (
+                """
+                + additional_prompt +
+                """):
                {"presentation theme": "[theme]", "presentation slides": [{"title": "[title]", "body": ["[point with keywords]", "[point with keywords]", "[point with keywords]"]}, {"title": "[title]", "body": ["[point with keywords]", "[point with keywords]", "[point with keywords]"]}]}
                Here is the content:
                {

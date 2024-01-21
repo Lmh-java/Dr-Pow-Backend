@@ -20,6 +20,9 @@ from template.portfolio_template import PortfolioTemplate
 from api.openai_api import query_chatgpt3_5
 from api.unsplash_api import search_photo, download_photo
 
+# FIXME: If this flag is true, it will save the api call chances.
+DEBUG_FLAG = True
+
 
 # Core PPT Generator
 class PPTGenerator:
@@ -49,12 +52,13 @@ class PPTGenerator:
         logging.debug("received doc content: {}".format(doc_content[:50]))
 
         # call chatgpt api to fetch json
-        # json_result = json.loads(query_chatgpt3_5(doc_content, self.prompt)
-        #                          .model_dump_json().replace("\n", ""))['content']
-        # json_result = json.loads(json_result)
-        # FIXME: use dummy json file now instead
-        with open("tests/example_json_response.json", 'r') as _:
-            json_result = json.loads(_.read())
+        if DEBUG_FLAG:
+            with open("tests/example_json_response.json", 'r') as _:
+                json_result = json.loads(_.read())
+        else:
+            json_result = json.loads(query_chatgpt3_5(doc_content, self.prompt)
+                                     .model_dump_json().replace("\n", ""))['content']
+            json_result = json.loads(json_result)
         logging.debug("received json from chatgpt3.5: {}".format(json_result))
 
         self.template.create_title_slide(json_result['presentation theme'])
@@ -66,11 +70,13 @@ class PPTGenerator:
             if count > 10:
                 break
             try:
-                # photo_id = search_photo(slide["title"])
-                # self.template.create_pic_slide(slide['title'], slide['body'], download_photo(photo_id))
-                self.template.create_pic_slide(slide['title'], slide['body'], Image.open("tests/test_image.png"))
+                if DEBUG_FLAG:
+                    self.template.create_pic_slide(slide['title'], slide['body'], Image.open("tests/test_image.png"))
+                else:
+                    photo_id = search_photo(slide["title"])
+                    self.template.create_pic_slide(slide['title'], slide['body'], download_photo(photo_id))
             except Exception as e:
                 logging.error("Skip due to error when creating slide #{}, {}".format(count, e))
         logging.debug("Successfully created pptx")
-        self.template.get_ppt().save("tests/test_outcome.pptx")
+        # self.template.get_ppt().save("tests/test_outcome.pptx")
         return self.template.get_ppt()
