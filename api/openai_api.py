@@ -12,7 +12,7 @@ if not client:
 def query_chatgpt3_5(content: str, additional_prompt: str) -> ChatCompletionMessage:
     completion = client.chat.completions.create(
         model="gpt-3.5-turbo",
-        temperature=0.5,
+        temperature=0.3,
         messages=[
             {"role": "system",
              "content": "You are a helpful assistant. Your expertise is in in summarizing texts and parsing information into JSON."},
@@ -34,7 +34,7 @@ You will need to replace the text in square brackets [] with your generated text
 Here is the content, surrounded by curly braces:
 {
                 """
-                + content +
+                + content[:1000] +
                 """
 }
 The additional prompt will now be provided in curly braces. If there is nothing in the curly braces, you may ignore the additional prompt. Here is the additional prompt: {                

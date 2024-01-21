@@ -3,7 +3,7 @@ import requests
 url = 'http://localhost:4000/upload'
 
 r = requests.post(url, files={
-    "file": ("test_txt.txt", open('test_txt.txt', "rb"),
+    "file": ("test_image.png", open('test_image.png', "rb"),
              "application/vnd.openxmlformats-officedocument.presentationml.presentation")},
                   params={"prompt": "",
                           "template": "Minimalistic",

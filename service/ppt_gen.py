@@ -49,6 +49,7 @@ class PPTGenerator:
             with open("tests/example_json_response.json", 'r') as _:
                 json_result = json.loads(_.read())
         else:
+            logging.debug("123192310239102931923012:" + self.content[:1000])
             json_result = json.loads(query_chatgpt3_5(self.content, self.prompt)
                                      .model_dump_json().replace("\n", ""))['content']
             json_result = json.loads(json_result)

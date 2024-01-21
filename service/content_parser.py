@@ -20,10 +20,10 @@ def parse_content(file: UploadFile) -> str:
     elif filename.endswith("md"):
         pass
     elif filename.endswith("png"):
-        return detect_text_in_image(UploadFile)
+        return detect_text_in_image(file)
     elif filename.endswith("jpg"):
-        return detect_text_in_image(UploadFile)
+        return detect_text_in_image(file)
     elif filename.endswith("jpeg"):
-        return detect_text_in_image(UploadFile)
+        return detect_text_in_image(file)
     else:
         raise ValueError("Unsupported file")
