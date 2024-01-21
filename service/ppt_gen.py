@@ -27,6 +27,7 @@ class PPTGenerator:
         with io.BytesIO() as io_b:
             io_b.write(file.file.read())
             self.doc_file = Document(io_b)
+        # TODO: templates mapping
         self.prompt = prompt
         self.template = PlainTemplate()
         self.file_type = file_type

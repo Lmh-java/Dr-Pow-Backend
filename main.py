@@ -41,7 +41,7 @@ async def upload_file(file: UploadFile, prompt: str = '', template: str = '', fi
     return {"filename": file.filename, 'upload_id': upload_id}
 
 
-@app.post("/download")
+@app.get("/download")
 async def download_file(upload_id: str) -> StreamingResponse:
     output = BytesIO()
     app.cache_storage[upload_id].save(output)
