@@ -46,7 +46,7 @@ async def download_file(upload_id: str) -> StreamingResponse:
     output = BytesIO()
     app.cache_storage[upload_id].save(output)
     output.seek(0)
-
+    # FIXME: pop out the file when it is downloaded for safety
     # app.cache_storage.pop(upload_id)
     return StreamingResponse(output, media_type='application/octet-stream')
 

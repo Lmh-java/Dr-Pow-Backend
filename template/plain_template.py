@@ -25,7 +25,7 @@ class PlainTemplate(BaseTemplate):
         slide = self.prs.slides.add_slide(slide_layout)
 
         title_box = slide.shapes.title
-        content_box = slide.placeholders[0]
+        content_box = slide.placeholders[2]
         image_box = slide.placeholders[1]
 
         title_box.text = title
