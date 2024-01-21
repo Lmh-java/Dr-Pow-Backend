@@ -4,8 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fbebfe2b-22c5-4fc1-8043-4a9cb08e956f" name="Changes" comment="Added test image">
-      <change beforePath="$PROJECT_DIR$/tests/test_outcome.pptx" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_outcome.pptx" afterDir="false" />
+    <list default="true" id="fbebfe2b-22c5-4fc1-8043-4a9cb08e956f" name="Changes" comment="Added support rtf and md">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/openai_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/openai_api.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/pptx_templates/History.pptx" beforeDir="false" afterPath="$PROJECT_DIR$/template/pptx_templates/History.pptx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/pptx_templates/Minimalistic.pptx" beforeDir="false" afterPath="$PROJECT_DIR$/template/pptx_templates/Minimalistic.pptx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/pptx_templates/Pastel.pptx" beforeDir="false" afterPath="$PROJECT_DIR$/template/pptx_templates/Pastel.pptx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/pptx_templates/Portfolio.pptx" beforeDir="false" afterPath="$PROJECT_DIR$/template/pptx_templates/Portfolio.pptx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,6 +19,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
@@ -164,7 +172,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705837680060</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added support rtf and md">
+      <option name="closed" value="true" />
+      <created>1705840852256</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1705840852256</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -186,7 +202,8 @@
     <MESSAGE value="Added google_cloud api support to handle images" />
     <MESSAGE value="lskjf kill mee" />
     <MESSAGE value="Added test image" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added test image" />
+    <MESSAGE value="Added support rtf and md" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added support rtf and md" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Dr_Pow_Backend$main.coverage" NAME="main Coverage Results" MODIFIED="1705840455489" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
