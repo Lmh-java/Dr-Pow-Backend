@@ -34,6 +34,7 @@ async def test():
 
 @app.post("/upload")
 async def upload_file(file: UploadFile, prompt: str = '', template: str = '', file_type: str = ''):
+    logging.critical(prompt)
     generator = PPTGenerator(file, prompt, template, file_type)
     upload_id = str(uuid1())
     pre_file = generator.generate()
