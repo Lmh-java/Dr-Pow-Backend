@@ -7,6 +7,7 @@ from fastapi import FastAPI, UploadFile
 from starlette.middleware.cors import CORSMiddleware
 from starlette.responses import StreamingResponse
 
+from service.content_parser import parse_content
 from service.ppt_gen import PPTGenerator
 
 app = FastAPI()
@@ -34,7 +35,8 @@ async def test():
 
 @app.post("/upload")
 async def upload_file(file: UploadFile, prompt: str = '', template: str = '', file_type: str = ''):
-    generator = PPTGenerator(file, prompt, template, file_type)
+    content = parse_content(file)
+    generator = PPTGenerator(content, prompt, template, file_type)
     upload_id = str(uuid1())
     pre_file = generator.generate()
     app.cache_storage[upload_id] = pre_file
@@ -54,7 +56,7 @@ async def download_file(upload_id: str) -> StreamingResponse:
 if __name__ == '__main__':
     from util.config import Config
 
-    logging.basicConfig(level=logging.CRITICAL)
+    logging.basicConfig(level=logging.DEBUG)
 
     logging.debug(f"Config loaded: openai_key -> {Config.OPEN_AI_API_KEY}, unsplash_key -> {Config.UNSPLASH_API_KEY}")
     uvicorn.run(app, host="127.0.0.1", port=4000)

@@ -1,14 +1,10 @@
-import io
 import json
 import logging
 from typing import List
 
 from PIL import Image
-from docx import Document
-from fastapi import UploadFile
 from pptx import Presentation
 
-from service.doc_parser import extract_doc_content
 
 from template.history_template import HistoryTemplate
 from template.pastel_template import PastelTemplate
@@ -26,10 +22,8 @@ DEBUG_FLAG = False
 
 # Core PPT Generator
 class PPTGenerator:
-    def __init__(self, file: UploadFile, prompt: str, template: str = '', file_type: str = ''):
-        with io.BytesIO() as io_b:
-            io_b.write(file.file.read())
-            self.doc_file = Document(io_b)
+    def __init__(self, content: str, prompt: str, template: str = '', file_type: str = ''):
+        self.content = content
         self.prompt = prompt
         # templates mapping
         if template == 'History':
@@ -48,15 +42,14 @@ class PPTGenerator:
 
     def generate(self) -> Presentation:
         # convert UploadFile to Document obj
-        doc_content = extract_doc_content(self.doc_file)
-        logging.debug("received doc content: {}".format(doc_content[:50]))
+        logging.debug("received doc content: {}".format(self.content[:50]))
 
         # call chatgpt api to fetch json
         if DEBUG_FLAG:
             with open("tests/example_json_response.json", 'r') as _:
                 json_result = json.loads(_.read())
         else:
-            json_result = json.loads(query_chatgpt3_5(doc_content, self.prompt)
+            json_result = json.loads(query_chatgpt3_5(self.content, self.prompt)
                                      .model_dump_json().replace("\n", ""))['content']
             json_result = json.loads(json_result)
         logging.debug("received json from chatgpt3.5: {}".format(json_result))

@@ -3,9 +3,9 @@ import requests
 url = 'http://localhost:4000/upload'
 
 r = requests.post(url, files={
-    "file": ("filename", open('test_doc.docx', "rb"),
+    "file": ("test_txt.txt", open('test_txt.txt', "rb"),
              "application/vnd.openxmlformats-officedocument.presentationml.presentation")},
-                  params={"prompt": "Use Spanish to return",
+                  params={"prompt": "",
                           "template": "Minimalistic",
                           "file_type": "application/vnd.openxmlformats-officedocument"})
 print(r.json())
