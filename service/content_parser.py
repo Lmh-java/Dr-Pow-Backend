@@ -1,11 +1,12 @@
 import io
-import logging
 
 from docx import Document
 from fastapi import UploadFile
 
 from api.google_cloud_api import detect_text_in_image
 from service.doc_parser import extract_doc_content
+
+from striprtf.striprtf import rtf_to_text
 
 
 def parse_content(file: UploadFile) -> str:
@@ -18,12 +19,15 @@ def parse_content(file: UploadFile) -> str:
     elif filename.endswith("txt"):
         return file.file.read().decode("utf-8")
     elif filename.endswith("md"):
-        pass
+        return file.file.read().decode("utf-8")
     elif filename.endswith("png"):
         return detect_text_in_image(file)
     elif filename.endswith("jpg"):
         return detect_text_in_image(file)
     elif filename.endswith("jpeg"):
         return detect_text_in_image(file)
+    elif filename.endswith("rtf"):
+        text = rtf_to_text(file.file.read().decode("utf-8"))
+        return text
     else:
         raise ValueError("Unsupported file")

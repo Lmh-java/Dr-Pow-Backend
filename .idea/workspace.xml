@@ -5,15 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fbebfe2b-22c5-4fc1-8043-4a9cb08e956f" name="Changes" comment="Added test image">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/google_cloud_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/google_cloud_api.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/openai_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/openai_api.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/content_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/service/content_parser.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/ppt_gen.py" beforeDir="false" afterPath="$PROJECT_DIR$/service/ppt_gen.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_image.png" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_image.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/test_outcome.pptx" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_outcome.pptx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_text_image.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_upload_download.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_upload_download.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,23 +23,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.main.executor": "Run",
-    "Python.test_upload_download.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "/Users/astronaut/PycharmProjects/Dr-Pow-Backend/tests",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "reference.settings.ide.settings.new.ui",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test_upload_download.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/astronaut/PycharmProjects/Dr-Pow-Backend/tests&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.new.ui&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
       <console-settings module-name="Doc2PPTBackEnd" is-module-sdk="true">
@@ -66,7 +58,7 @@
       <recent name="$PROJECT_DIR$/service" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.test_upload_download">
+  <component name="RunManager" selected="Python.main">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Doc2PPTBackEnd" />
       <option name="ENV_FILES" value="" />
@@ -115,8 +107,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.test_upload_download" />
         <item itemvalue="Python.main" />
+        <item itemvalue="Python.test_upload_download" />
       </list>
     </recent_temporary>
   </component>
@@ -197,7 +189,7 @@
     <option name="LAST_COMMIT_MESSAGE" value="Added test image" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Dr_Pow_Backend$main.coverage" NAME="main Coverage Results" MODIFIED="1705839461746" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Dr_Pow_Backend$test_upload_download.coverage" NAME="test_upload_download Coverage Results" MODIFIED="1705839463705" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/Dr_Pow_Backend$main.coverage" NAME="main Coverage Results" MODIFIED="1705840455489" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Dr_Pow_Backend$test_upload_download.coverage" NAME="test_upload_download Coverage Results" MODIFIED="1705840467625" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
   </component>
 </project>
