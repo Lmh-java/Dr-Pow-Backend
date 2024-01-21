@@ -21,7 +21,7 @@ from api.openai_api import query_chatgpt3_5
 from api.unsplash_api import search_photo, download_photo
 
 # FIXME: If this flag is true, it will save the api call chances.
-DEBUG_FLAG = True
+DEBUG_FLAG = False
 
 
 # Core PPT Generator

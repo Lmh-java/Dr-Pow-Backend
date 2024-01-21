@@ -34,7 +34,6 @@ async def test():
 
 @app.post("/upload")
 async def upload_file(file: UploadFile, prompt: str = '', template: str = '', file_type: str = ''):
-    logging.critical(prompt)
     generator = PPTGenerator(file, prompt, template, file_type)
     upload_id = str(uuid1())
     pre_file = generator.generate()
@@ -55,7 +54,7 @@ async def download_file(upload_id: str) -> StreamingResponse:
 if __name__ == '__main__':
     from util.config import Config
 
-    logging.basicConfig(level=logging.DEBUG)
+    logging.basicConfig(level=logging.CRITICAL)
 
     logging.debug(f"Config loaded: openai_key -> {Config.OPEN_AI_API_KEY}, unsplash_key -> {Config.UNSPLASH_API_KEY}")
     uvicorn.run(app, host="127.0.0.1", port=4000)
