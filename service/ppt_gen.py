@@ -69,6 +69,7 @@ class PPTGenerator:
                     photo_id = search_photo(slide["title"])
                     self.template.create_pic_slide(slide['title'], slide['body'], download_photo(photo_id))
             except Exception as e:
+                self.template.create_pic_slide(slide['title'], slide['body'], Image.open("tests/default_image.jpg"))
                 logging.error("Skip due to error when creating slide #{}, {}".format(count, e))
         logging.debug("Successfully created pptx")
         # self.template.get_ppt().save("tests/test_outcome.pptx")
