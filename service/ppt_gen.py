@@ -27,9 +27,20 @@ class PPTGenerator:
         with io.BytesIO() as io_b:
             io_b.write(file.file.read())
             self.doc_file = Document(io_b)
-        # TODO: templates mapping
         self.prompt = prompt
-        self.template = PlainTemplate()
+        # templates mapping
+        if template == 'History':
+            self.template = HistoryTemplate()
+        elif template == 'Minimalistic':
+            self.template = MinimalisticTemplate()
+        elif template == 'Pastel':
+            self.template = PastelTemplate()
+        elif template == 'Portfolio':
+            self.template = PortfolioTemplate()
+        elif template == 'School':
+            self.template = SchoolTemplate()
+        else:
+            self.template = PlainTemplate()
         self.file_type = file_type
 
     def generate(self) -> Presentation:
