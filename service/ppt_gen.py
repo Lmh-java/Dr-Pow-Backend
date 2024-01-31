@@ -16,7 +16,7 @@ from template.portfolio_template import PortfolioTemplate
 from api.openai_api import query_chatgpt3_5
 from api.unsplash_api import search_photo, download_photo
 
-# FIXME: If this flag is true, it will save the api call chances.
+# FIXME: IF THIS IS TRUE, IT WILL DISABLE THE API CALLS AND ONLY OUTPUT DUMMY TEST DATA.
 DEBUG_FLAG = False
 
 
@@ -49,7 +49,6 @@ class PPTGenerator:
             with open("tests/example_json_response.json", 'r') as _:
                 json_result = json.loads(_.read())
         else:
-            logging.debug("123192310239102931923012:" + self.content[:1000])
             json_result = json.loads(query_chatgpt3_5(self.content, self.prompt)
                                      .model_dump_json().replace("\n", ""))['content']
             json_result = json.loads(json_result)
