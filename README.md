@@ -1,7 +1,7 @@
 # DoC-To-PoW
 **A simple-to-use tool for converting images and documents to presentation slides.**
 > [!NOTE]  
-> This is the front end repo of DoC-To-Pow. For back end repo, please go [here](https://github.com/Lmh-java/Dr-Pow-Backend).
+> This is the back end repo of DoC-To-Pow. For front end repo, please go [here](https://github.com/clay-arras/dr-pow-frontend).
 ## What is DoC-To-PoW
 DoC-To-PoW is an AI-powered opensource service designed to quickly generate presentation slides by pre-existing documents. (For
 details of document types supported, please see the following section). 
