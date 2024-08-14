@@ -101,7 +101,7 @@ python main.py
 
 | Front End    | Back End   | UI / UX |
 |--------------|------------|---------|
-| Next UI      | SimpleAPI  | Figma   |
+| Next UI      |   FastAPI  | Figma   |
 | React.js     | OpenAI     |         |
 | Tailwind CSS | Google OCR |         |
 
